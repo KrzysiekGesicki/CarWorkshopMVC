@@ -1,3 +1,5 @@
+using CarWorkshopMVC.Entieties;
+
 namespace CarWorkshopMVC
 {
     public class Program
@@ -8,6 +10,8 @@ namespace CarWorkshopMVC
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ApplicationDbContext>();
 
             var app = builder.Build();
 
